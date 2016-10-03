@@ -12,7 +12,6 @@
 - Compiling of [sass](http://sass-lang.com/)
 - Creation of svg-sprite
 - Autoprefixer
-- CSS minification with [csso](https://github.com/css/csso)
 - JS concatenation and minification
 - Image optimisation
 - Automatic browser reload
