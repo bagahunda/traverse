@@ -1,0 +1,46 @@
+mixin header()
+  .svg-sprite
+    include ../sprite/svg.svg
+  +b.header.flex
+    a.hamburger.js-mobile-menu(href="#")
+      span.line
+      span.line
+      span.line
+    a.header__logo(href="/")
+      img(src="assets/images/logo.png", alt="traverse logo")
+      
+    .header__nav.flex
+      ul.main-nav
+        li
+          a(href="#").main-nav__item platform
+        li.has-submenu.js-show-submenu
+          a.main-nav__item(href="#") products
+          ul.main-nav__submenu
+            li
+              a(href="#").submenu__item
+                img(src="assets/images/submenu-wind.png", alt="")
+                svg(width="14" height="14")
+                  use(xlink:href="#Wind")
+                span wind
+            li
+              a(href="#").submenu__item
+                img(src="assets/images/submenu-hydro.png", alt="")
+                svg(width="11" height="16")
+                  use(xlink:href="#Hydro")
+                span hydro
+            li
+              a(href="#").submenu__item
+                img(src="assets/images/submenu-solar.png", alt="")
+                svg(width="17" height="17")
+                  use(xlink:href="#Solar")
+                span solar
+        li
+          a.main-nav__item(href="#") solutions
+        li
+          a.main-nav__item(href="#") blog
+        li
+          a.main-nav__item(href="#") login
+          
+      .header__email
+        input(type="email" name="email" id="email" placeholder="Enter email")
+        button(type="button").btn.btn--header-search get started

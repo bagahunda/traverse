@@ -1,0 +1,85 @@
+
+$base__font-size: 16px
+
+//-- colors:start --//
+$blue        : #0077D8
+
+$text-color  : #1D1D1D
+$header-color: #3B3B41
+$nav-color   : #313131
+//-- colors:end --//
+
+//-- typo:start --//
+$din-pro-black: 'DINPro-Black'
+$din-pro-bold: 'DINPro-Bold'
+$din-pro-light: 'DINPro-Light'
+$din-pro-medium: 'DINPro-Medium'
+$din-pro-regular: 'DINPro-Regular'
+//-- typo:end --//
+
+.clearfix:after
+  content: ""
+  display: block
+  clear: both
+
+.btn
+  display: inline-block
+  background: $blue
+  color: #ffffff
+  text-transform: uppercase
+  font-family: $din-pro-bold
+  font-size: rem(14px)
+  text-align: center
+  text-decoration: none
+  border: none
+  outline: none
+  appearance: none
+
+.btn--header-search
+  width: 127px
+  height: 32px
+  position: absolute
+  right: 0
+  top: 0
+
+  @media screen and (max-width: 940px)
+    width: 142px
+
+  @media screen and (max-width: 390px)
+    width: 135px
+
+.btn--ghost
+  padding: em(10px) em(25px) em(12px)
+  font-size: rem(18px)
+  background: transparent
+  border: 2px solid #ffffff
+
+
+
+html
+  box-sizing: border-box
+
+*,
+*:before,
+*:after
+  box-sizing: inherit
+
+body
+  font-size: rem(18px)
+  font-family: $din-pro-regular
+  color: $text-color
+  background: #ffffff
+
+:disabled, [disabled], [aria-disabled="true"]
+  cursor: not-allowed
+
+.svg-sprite
+  display: none
+
+.flex
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  align-items: center
+
+$visual-grid: true

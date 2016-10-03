@@ -1,0 +1,22 @@
+
+// Pretty EM Conversor
+@function em($objetivo, $base: $base__font-size)
+  @return ($objetivo / $base) * 1em
+
+// The same but for REM
+@function rem($target)
+  @return ($target / $base__font-size) * 1rem
+
+// Cut long text with ellipsis, works only for one line of text
+@mixin text-ellipsis
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+@mixin reset-input
+  border: 0
+  padding: 0
+  margin: 0
+  outline: none
+  background: none
+  border: none
