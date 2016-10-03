@@ -4,7 +4,7 @@ include ../../../node_modules/bemto.jade/bemto
 include ../blocks/scripts/scripts
 
 include ../blocks/header/header
-include ../blocks/hero/hero
+include ../blocks/platform/platform
 include ../blocks/footer/footer
 
 doctype html
@@ -12,6 +12,8 @@ html(lang='ru')
   include ../blocks/head/head
   body
     +header()
-    +hero()
+    .wrapper
+      +platform()
+    +footer()
     block scripts
     +scripts(['https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', 'build.js'])

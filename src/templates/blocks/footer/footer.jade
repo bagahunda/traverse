@@ -1,2 +1,9 @@
 mixin footer()
-  +b.footer&attributes(attributes)
+  +b.footer.flex
+    a.footer__logo(href="/")
+      img(src="assets/images/logo.png", alt="")
+    ul.footer__links
+      li
+        a.footer-link(href="#") help center
+      li
+        a.footer-link(href="#") contacts

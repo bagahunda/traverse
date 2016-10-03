@@ -17,6 +17,35 @@ $din-pro-medium: 'DINPro-Medium'
 $din-pro-regular: 'DINPro-Regular'
 //-- typo:end --//
 
+//grid settings
+$max-width: 1160px
+
+html
+  box-sizing: border-box
+  height: 100%
+
+*,
+*:before,
+*:after
+  box-sizing: inherit
+
+body
+  height: 100%
+  font-size: rem(18px)
+  font-family: $din-pro-regular
+  color: $text-color
+  background: #ffffff
+
+.wrapper
+  min-height: 100%
+  margin-bottom: -35px
+  padding-top: 65px
+
+  &:after
+    display: block
+    content: ""
+    height: 35px
+
 .clearfix:after
   content: ""
   display: block
@@ -54,22 +83,6 @@ $din-pro-regular: 'DINPro-Regular'
   background: transparent
   border: 2px solid #ffffff
 
-
-
-html
-  box-sizing: border-box
-
-*,
-*:before,
-*:after
-  box-sizing: inherit
-
-body
-  font-size: rem(18px)
-  font-family: $din-pro-regular
-  color: $text-color
-  background: #ffffff
-
 :disabled, [disabled], [aria-disabled="true"]
   cursor: not-allowed
 
@@ -81,5 +94,11 @@ body
   flex-direction: row
   flex-wrap: nowrap
   align-items: center
+
+.inner-container
+  @include outer-container
+
+.inner-content
+  padding-top: 3.27em
 
 $visual-grid: true

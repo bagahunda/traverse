@@ -57,3 +57,30 @@ h1
   margin: 0
   font-family: $din-pro-bold
   font-size: rem(48px)
+
+.section-header
+  position: relative
+  margin: 0
+  padding-bottom: 0.56em
+  font-family: $din-pro-medium
+  font-size: rem(32px)
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: 1.64px
+
+  &:after
+    width: 37px
+    height: 1px
+    position: absolute
+    left: 50%
+    margin-left: -16px
+    bottom: 0
+    background: $blue
+    content: ''
+
+.section-caption
+  margin: 13px auto 0
+  max-width: 370px
+  font-size: rem(13px)
+  line-height: 1.69
+  text-align: center
