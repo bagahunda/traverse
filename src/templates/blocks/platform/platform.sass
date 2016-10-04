@@ -3,12 +3,23 @@
     @include span-columns(4 of 12)
     text-align: center
 
-    &:first-child
-      padding-right: 16px
-      padding-top: 16px
+    @media screen and (max-width: 940px)
+      width: 100%
+      float: none
+
+    &:not(:last-child)
+      @media screen and (max-width: 940px)
+        margin-bottom: 83px
 
 .platform-header
   margin-bottom: 55px
+
+.platform-card-container
+  padding-right: 16px
+  padding-top: 16px
+
+  @media screen and (max-width: 940px)
+    display: none
 
 .platform-card
   border: 1px solid #979797
@@ -56,3 +67,47 @@
     img
       max-height: 100%
       width: auto
+
+.feature
+
+  &:first-child
+    padding-top: 46px
+    margin-bottom: 83px
+
+    @media screen and (max-width: 940px)
+      margin-bottom: 0
+      padding-top: 0
+
+  &:not(:last-child)
+      @media screen and (max-width: 940px)
+        margin-bottom: 83px
+
+  &__title
+    margin: 19px 0 11px
+    font-family: $din-pro-medium
+    text-transform: uppercase
+
+  &__text
+    padding: 0 69px
+    font-size: 13px
+    line-height: 22px
+
+    @media screen and (max-width: 940px)
+      max-width: 317px
+      margin: 0 auto
+
+    use
+      circle
+        fill: #ffffff
+
+.section-hero-img
+  text-align: center
+
+  @media screen and (max-width: 940px)
+    margin-bottom: 46px
+
+  img
+    width: calc(100% - 40px)
+    max-width: 844px
+    height: auto
+    box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.20)
