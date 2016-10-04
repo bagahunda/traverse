@@ -1,11 +1,29 @@
 mixin platform()
   section.inner-content
-    h2.section-header Platform
-    p.section-caption Small decriptive text facts about something that can be used in calculating, reasoning, or planning
+    .platform-header
+      h2.section-header Platform
+      p.section-caption Small decriptive text facts about something that can be used in calculating, reasoning, or planning
     
     .inner-container.cf
       .platform__item
-        | platform
+        +b.platform-card
+          +e.img
+            img(src="assets/images/platform-card.jpg", alt="")
+            +e.title
+              | FEASIBILITY STUDY
+              date May 2016
+          +e.content
+            +e.header
+              h3.card-title.card-title--water ATLANTIC WATER & ELECTRIC
+            +e.text
+              | Cileangan A-2
+              br
+              | Aceh, North Sumatera
+              br
+              | 24.6MW Hydroelectric Scheme
+            +e.footer
+              a.card-logo(href="#")
+                img(src="assets/images/logo.png", alt="")
       .platform__item
         | platform
       .platform__item

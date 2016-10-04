@@ -15,10 +15,8 @@ $din-pro-bold: 'DINPro-Bold'
 $din-pro-light: 'DINPro-Light'
 $din-pro-medium: 'DINPro-Medium'
 $din-pro-regular: 'DINPro-Regular'
+$blender-pro-medium: 'Blender Pro'
 //-- typo:end --//
-
-//grid settings
-$max-width: 1160px
 
 html
   box-sizing: border-box
@@ -64,6 +62,12 @@ body
   outline: none
   appearance: none
 
+  &:hover
+    background: #0F72C2
+
+  &:active
+    background: #08528F
+
 .btn--header-search
   width: 127px
   height: 32px
@@ -99,6 +103,4 @@ body
   @include outer-container
 
 .inner-content
-  padding-top: 3.27em
-
-$visual-grid: true
+  padding-top: 62px

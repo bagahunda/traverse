@@ -5,6 +5,7 @@ include ../blocks/scripts/scripts
 
 include ../blocks/header/header
 include ../blocks/hero/hero
+include ../blocks/platform/platform
 include ../blocks/footer/footer
 
 doctype html
@@ -13,5 +14,6 @@ html(lang='ru')
   body
     +header()
     +hero()
+    +platform()
     block scripts
     +scripts(['https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', 'build.js'])

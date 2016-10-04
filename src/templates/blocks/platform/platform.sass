@@ -1,3 +1,58 @@
 .platform
   &__item
-    @include span-columns(1 of 3)
+    @include span-columns(4 of 12)
+    text-align: center
+
+    &:first-child
+      padding-right: 16px
+      padding-top: 16px
+
+.platform-header
+  margin-bottom: 55px
+
+.platform-card
+  border: 1px solid #979797
+  box-shadow: 8px -8px 0 rgba(96, 95, 95, 0.19), 16px -16px 0 rgba(213, 213, 213, 0.7)
+
+  &__title
+    position: absolute
+    bottom: 42px
+    width: 100%
+    font-family: $din-pro-medium
+    font-size: 25px
+    text-align: center
+    letter-spacing: 1.28px
+    color: #ffffff
+    z-index: 2
+
+    date
+      margin-top: 6px
+      display: block
+      font-size: 16px
+
+  &__img
+    position: relative
+    padding-top: 100%
+    overflow: hidden
+
+    img
+      width: 100%
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+
+  &__content
+    padding: 0 19px 20px
+
+  &__text
+    margin-bottom: 24px
+    font-size: 13px
+
+  &__footer
+    height: 14px
+    text-align: right
+
+    img
+      max-height: 100%
+      width: auto
