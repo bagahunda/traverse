@@ -51,6 +51,7 @@ body
 
 .btn
   display: inline-block
+  padding: 6px 26px
   background: $blue
   color: #ffffff
   text-transform: uppercase
@@ -68,9 +69,20 @@ body
   &:active
     background: #08528F
 
+  &--white
+    padding: 12px 25px 14px
+    font-size: 18px
+    background: #ffffff
+    color: #000000
+
+    &:hover,
+    &:active
+      background: #ffffff
+
 .btn--header-search
   width: 127px
   height: 32px
+  padding: 0
   position: absolute
   right: 0
   top: 0
@@ -81,11 +93,21 @@ body
   @media screen and (max-width: 390px)
     width: 135px
 
+  @media screen and (max-width: 360px)
+    width: 100px
+
 .btn--ghost
-  padding: em(10px) em(25px) em(12px)
+  padding: 10px 25px 12px
   font-size: rem(18px)
   background: transparent
   border: 2px solid #ffffff
+
+  &:hover,
+  &:active
+    background: transparent
+
+.btn + .btn
+  margin-left: 18px
 
 :disabled, [disabled], [aria-disabled="true"]
   cursor: not-allowed
@@ -106,4 +128,22 @@ body
     padding: 0 20px
 
 .inner-section
-  padding: 122px 0
+  padding: calc(62px + 3vh) 0
+
+.inner-hero-title
+  position: relative
+  padding-bottom: 17px
+  font-family: $din-pro-medium
+  font-size: 38px
+  letter-spacing: 1.94px
+  text-transform: uppercase
+
+  &:after
+    width: 37px
+    height: 1px
+    position: absolute
+    bottom: 0
+    left: 50%
+    margin-left: -18px
+    background: #ffffff
+    content: ''

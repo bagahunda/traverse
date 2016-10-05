@@ -6,6 +6,10 @@ include ../blocks/scripts/scripts
 include ../blocks/header/header
 include ../blocks/hero/hero
 include ../blocks/platform/platform
+include ../blocks/wind/wind
+include ../blocks/hydro/hydro
+include ../blocks/solar/solar
+include ../blocks/solutions/solutions
 include ../blocks/footer/footer
 
 doctype html
@@ -16,6 +20,10 @@ html(lang='ru')
     #fullpage
       +hero()
       +platform()
+      +wind()
+      +hydro()
+      +solar()
+      +solutions()
     +footer()
     block scripts
     +scripts(['https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', 'build.js'])

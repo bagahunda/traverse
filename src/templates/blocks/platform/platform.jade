@@ -1,83 +1,81 @@
 mixin platform()
-  .section
-    section.inner-section.platform.mobile-slider
-      .platform-header
-        h2.section-header Platform
-        p.section-caption Small decriptive text facts about something that can be used in calculating, reasoning, or planning
+  section.inner-section.platform.mobile-slider#platform
+    .platform-header
+      h2.section-header Platform
+      p.section-caption Small decriptive text facts about something that can be used in calculating, reasoning, or planning
+    
+    .inner-container.cf
+      .platform__item.platform-card-container
+        +b.platform-card
+          +e.img
+            img(src="assets/images/platform-card.jpg", alt="")
+            +e.title
+              | FEASIBILITY STUDY
+              date May 2016
+          +e.content
+            +e.header
+              h3.card-title.card-title--water ATLANTIC WATER & ELECTRIC
+            +e.text
+              | Cileangan A-2
+              br
+              | Aceh, North Sumatera
+              br
+              | 24.6MW Hydroelectric Scheme
+            +e.footer
+              a.card-logo(href="#")
+                img(src="assets/images/logo.png", alt="")
+      .platform__item
+        +b.feature
+          +e.img
+            svg(width="80" height="82")
+              use(xlink:href="#icon-data")
+          +e.title HARMONIZED DATA
+          +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
+          
+        +b.feature
+          +e.img
+            svg(width="113" height="86")
+              use(xlink:href="#icon-simulations")
+          +e.title simulations
+          +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
+      .platform__item
+        +b.feature
+          +e.img
+            svg(width="92" height="92")
+              use(xlink:href="#icon-vision")
+          +e.title COMPUTER VISION
+          +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
+          
+        +b.feature
+          +e.img
+            svg(width="85" height="81")
+              use(xlink:href="#icon-reporting")
+          +e.title FEASIBILITY REPORTING
+          +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
+
+  section.inner-section.mobile-slider
+    .section-hero-img
+      img(src="assets/images/prospector.jpg", alt="")
       
-      .inner-container.cf
-        .platform__item.platform-card-container
-          +b.platform-card
-            +e.img
-              img(src="assets/images/platform-card.jpg", alt="")
-              +e.title
-                | FEASIBILITY STUDY
-                date May 2016
-            +e.content
-              +e.header
-                h3.card-title.card-title--water ATLANTIC WATER & ELECTRIC
-              +e.text
-                | Cileangan A-2
-                br
-                | Aceh, North Sumatera
-                br
-                | 24.6MW Hydroelectric Scheme
-              +e.footer
-                a.card-logo(href="#")
-                  img(src="assets/images/logo.png", alt="")
-        .platform__item
-          +b.feature
-            +e.img
-              svg(width="80" height="82")
-                use(xlink:href="#icon-data")
-            +e.title HARMONIZED DATA
-            +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
-            
-          +b.feature
-            +e.img
-              svg(width="113" height="86")
-                use(xlink:href="#icon-simulations")
-            +e.title simulations
-            +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
-        .platform__item
-          +b.feature
-            +e.img
-              svg(width="92" height="92")
-                use(xlink:href="#icon-vision")
-            +e.title COMPUTER VISION
-            +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
-            
-          +b.feature
-            +e.img
-              svg(width="85" height="81")
-                use(xlink:href="#icon-reporting")
-            +e.title FEASIBILITY REPORTING
-            +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
-  
-  .section    
-    section.inner-section.mobile-slider
-      .section-hero-img
-        img(src="assets/images/prospector.jpg", alt="")
-        
-      .inner-container.cf
-        .platform__item
-          +b.feature
-            +e.img
-              svg(width="76" height="67")
-                use(xlink:href="#icon-engineers")
-            +e.title DESIGNED FOR ENGINEERS
-            +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
-        .platform__item
-          +b.feature
-            +e.img
-              svg(width="79" height="89")
-                use(xlink:href="#icon-investment")
-            +e.title DESIGNED FOR INVESTMENT COMMITEES
-            +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
-        .platform__item
-          +b.feature
-            +e.img
-              svg(width="78" height="91")
-                use(xlink:href="#icon-analysts")
-            +e.title DESIGNED FOR ANALYSTS
-            +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
+    .inner-container.cf
+      .platform__item
+        +b.feature
+          +e.img
+            svg(width="76" height="67")
+              use(xlink:href="#icon-engineers")
+          +e.title DESIGNED FOR ENGINEERS
+          +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
+      .platform__item
+        +b.feature
+          +e.img
+            svg(width="79" height="89")
+              use(xlink:href="#icon-investment")
+          +e.title DESIGNED FOR INVESTMENT COMMITEES
+          +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
+      .platform__item
+        +b.feature
+          +e.img
+            svg(width="78" height="91")
+              use(xlink:href="#icon-analysts")
+          +e.title DESIGNED FOR ANALYSTS
+          +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
