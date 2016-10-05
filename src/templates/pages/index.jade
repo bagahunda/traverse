@@ -13,7 +13,9 @@ html(lang='ru')
   include ../blocks/head/head
   body
     +header()
-    +hero()
-    +platform()
+    #fullpage
+      +hero()
+      +platform()
+    +footer()
     block scripts
     +scripts(['https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', 'build.js'])
