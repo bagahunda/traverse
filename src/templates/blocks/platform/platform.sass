@@ -92,8 +92,17 @@
 .feature
 
   @media screen and (max-width: 940px)
+    width: 50%
+    float: left
+
+  @media screen and (max-width: 500px)
     width: 100%
     float: none
+
+  &:last-child
+    @media screen and (max-width: 940px)
+      width: 100%
+
   &:not(:last-child)
     margin-bottom: 83px
 
@@ -120,8 +129,8 @@
   text-align: center
   // float: left
 
-  // @media screen and (max-width: 940px)
-  //   margin-bottom: 46px
+  @media screen and (max-width: 940px)
+    margin-bottom: 46px
 
   img
     // width: calc(100% - 40px)
