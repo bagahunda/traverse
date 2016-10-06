@@ -27,7 +27,7 @@
     console.log("hero");
     setInterval(function() {
       randomHeroBg();
-    }, 7000);
+    }, 3000);
 
   });
 
