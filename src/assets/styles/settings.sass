@@ -168,11 +168,13 @@ body
   @media screen and (max-width: 940px)
     display: block
 
-  .section-hero-img,
-  .platform__item
-    float: none
+  .feature__img, .feature__content
+    float: none !important
     display: table-cell
     vertical-align: middle
+
+  svg
+    margin-right: -80px
 
     @media screen and (max-width: 940px)
       display: block

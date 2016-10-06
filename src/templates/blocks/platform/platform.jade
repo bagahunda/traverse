@@ -54,28 +54,24 @@ mixin platform()
           +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
 
   section.inner-section
+    .section-hero-img
+      img(src="assets/images/prospector.jpg", alt="")
       
-    .inner-container.cf.u-table-layout
-      .section-hero-img
-        img(src="assets/images/prospector.jpg", alt="")
-      .platform__item.js-bx-slider
-        +b.feature
+    .inner-container.cf
+      
+      .js-bx-slider.platform2-features
+        +b.feature.u-table-layout
           +e.img
             svg(width="76" height="67")
               use(xlink:href="#icon-engineers")
-          +e.title DESIGNED FOR ENGINEERS
-          +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
+          +e.content
+            +e.title DESIGNED FOR ENGINEERS AND ANALYSTS
+            +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
         
-        +b.feature
+        +b.feature.u-table-layout
           +e.img
             svg(width="79" height="89")
               use(xlink:href="#icon-investment")
-          +e.title DESIGNED FOR INVESTMENT COMMITEES
-          +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
-        
-        +b.feature
-          +e.img
-            svg(width="78" height="91")
-              use(xlink:href="#icon-analysts")
-          +e.title DESIGNED FOR ANALYSTS
-          +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
+          +e.content
+            +e.title DESIGNED FOR INVESTMENT COMMITEES
+            +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
