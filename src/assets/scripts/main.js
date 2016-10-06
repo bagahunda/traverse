@@ -10,14 +10,20 @@
       var targetImage = targetImages [index];
       var targetImage1 = targetImages [index + 1];
 
-      if (targetImage1 === undefined) {
-        targetImage1 = '#ffffff';
-      }
+
 
       var colorThief = new ColorThief();
       var startColor = colorThief.getColor (targetImage);
-      var endColor = colorThief.getColot (targetImage);
-      console.log(startColor + ',' + endColor);
+      if (targetImage1 === undefined) {
+        var endColor = '#ffffff';
+      } else {
+        var endColor = colorThief.getColor (targetImage1);
+      }
+      console.log($(this).parent());
+      $(this).parent().css({
+        'background': 'linear-gradient(to bottom, ' + arrayToRGB(startColor) + ', ' + arrayToRGB(endColor) + ')'
+      })
+
     });
   }
 
