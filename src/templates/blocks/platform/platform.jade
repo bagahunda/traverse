@@ -1,5 +1,5 @@
 mixin platform()
-  section.inner-section.platform.mobile-slider#platform
+  section.inner-section.platform#platform
     .platform-header
       h2.section-header Platform
       p.section-caption Small decriptive text facts about something that can be used in calculating, reasoning, or planning
@@ -24,7 +24,7 @@ mixin platform()
             +e.footer
               a.card-logo(href="#")
                 img(src="assets/images/logo.png", alt="")
-      .platform__item
+      .platform__features
         +b.feature
           +e.img
             svg(width="80" height="82")
@@ -38,7 +38,7 @@ mixin platform()
               use(xlink:href="#icon-simulations")
           +e.title simulations
           +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
-      .platform__item
+        
         +b.feature
           +e.img
             svg(width="92" height="92")
@@ -53,11 +53,11 @@ mixin platform()
           +e.title FEASIBILITY REPORTING
           +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
 
-  section.inner-section.mobile-slider
-    .section-hero-img
-      img(src="assets/images/prospector.jpg", alt="")
+  section.inner-section
       
-    .inner-container.cf
+    .inner-container.cf.u-table-layout
+      .section-hero-img
+        img(src="assets/images/prospector.jpg", alt="")
       .platform__item
         +b.feature
           +e.img
@@ -65,14 +65,14 @@ mixin platform()
               use(xlink:href="#icon-engineers")
           +e.title DESIGNED FOR ENGINEERS
           +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
-      .platform__item
+        
         +b.feature
           +e.img
             svg(width="79" height="89")
               use(xlink:href="#icon-investment")
           +e.title DESIGNED FOR INVESTMENT COMMITEES
           +e.text Small decriptive text facts about something that can be used in calculating, reasoning, or planning
-      .platform__item
+        
         +b.feature
           +e.img
             svg(width="78" height="91")

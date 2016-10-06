@@ -130,6 +130,9 @@ body
 .inner-section
   padding: calc(62px + 3vh) 0
 
+  &:nth-child(odd)
+    background-color: #FAFAFA
+
 .inner-hero-title
   position: relative
   padding-bottom: 17px
@@ -147,3 +150,23 @@ body
     margin-left: -18px
     background: #ffffff
     content: ''
+
+@keyframes mouseAnimation
+
+  25%
+    bottom: 93px
+  50%
+    bottom: 73px
+  75%
+    bottom: 93px
+  100%
+    bottom: 83px
+
+.u-table-layout
+  display: table
+
+  .section-hero-img,
+  .platform__item
+    float: none
+    display: table-cell
+    vertical-align: middle

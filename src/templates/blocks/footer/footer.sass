@@ -4,10 +4,13 @@
   bottom: 0
   left: 0
   height: 35px
-  padding: 0 em(132px)
+  padding: 0 132px
   background: #F8F8F8
   align-items: center
   z-index: 8
+
+  @media screen and (max-width: 940px)
+    padding: 0 20px
 
   img
     display: block
@@ -23,7 +26,10 @@
       display: inline-block
 
       &:not(:last-child)
-        margin-right: em(50px)
+        margin-right: 50px
+
+        @media screen and (max-width: 940px)
+          margin-right: 20px
 
 .footer-link
   font-size: rem(12px)

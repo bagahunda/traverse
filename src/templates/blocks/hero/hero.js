@@ -11,15 +11,15 @@
     }
     image = images[rand];
 
-    $('.hero__bg').fadeOut(1000);
+    $('.hero__bg').fadeOut(500);
 
     setTimeout(function(){
       $('.hero__bg').css({
         'background-image': 'url("assets/images/' + image + '")'
       });
-    }, 1000);
+    }, 500);
 
-    $('.hero__bg').fadeIn(1000);
+    $('.hero__bg').fadeIn(500);
 
   }
 
