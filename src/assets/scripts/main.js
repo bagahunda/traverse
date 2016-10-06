@@ -15,7 +15,7 @@
       var colorThief = new ColorThief();
       var startColor = colorThief.getColor (targetImage);
       if (targetImage1 === undefined) {
-        var endColor = [255, 255, 255];
+        var endColor = [250, 250, 250];
       } else {
         var endColor = colorThief.getColor (targetImage1);
       }
