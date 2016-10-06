@@ -15,10 +15,19 @@
     @include span-columns(8 of 12)
     text-align: center
 
+    @media screen and (max-width: 940px)
+      width: 100%
+      float: none
+      margin: 0 auto
+
     .feature
       @include span-columns(6 of 12)
       padding-top: 46px
       margin-bottom: 83px
+
+      @media screen and (max-width: 940px)
+        width: 100%
+        float: none
 
 .platform-header
   margin-bottom: 55px
@@ -82,10 +91,9 @@
 
 .feature
 
-  // @media screen and (max-width: 940px)
-  //   margin-bottom: 0
-  //   padding-top: 0
-
+  @media screen and (max-width: 940px)
+    width: 100%
+    float: none
   &:not(:last-child)
     margin-bottom: 83px
 

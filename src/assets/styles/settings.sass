@@ -165,8 +165,16 @@ body
 .u-table-layout
   display: table
 
+  @media screen and (max-width: 940px)
+    display: block
+
   .section-hero-img,
   .platform__item
     float: none
     display: table-cell
     vertical-align: middle
+
+    @media screen and (max-width: 940px)
+      display: block
+      width: 100%
+      text-align: center
