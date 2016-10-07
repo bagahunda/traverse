@@ -12,6 +12,7 @@
           })
         });
       } else {
+        $('.modal-enlarge').removeClass('modal-enlarge');
         $(this).addClass('modal-enlarge');
         $(this).parents('.bx-viewport').css({
           'overflow': 'visible'
