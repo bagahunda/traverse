@@ -17,13 +17,12 @@ html(lang='ru')
   include ../blocks/head/head
   body
     +header()
-    #fullpage
-      +hero()
-      +platform()
-      +hydro()
-      +solar()
-      +wind()
-      +solutions()
+    +hero()
+    +platform()
+    +hydro()
+    +solar()
+    +wind()
+    +solutions()
     +footer()
     block scripts
     +scripts(['https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', 'build.js'])

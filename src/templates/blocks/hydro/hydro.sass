@@ -19,3 +19,58 @@
 
   img
     display: none
+
+.modal
+  position: fixed
+  top: 62px
+  left: 0
+  width: 100%
+  height: calc(100% - 62px)
+  background: #ffffff
+  z-index: 10
+
+  &__close
+    position: absolute
+    top: 32px
+    right: 82px
+
+  &__header
+    padding-top: 57px
+    font-size: 22px
+    color: #626262
+    text-align: center
+
+    p
+      max-width: 630px
+      margin: 42px auto 0
+
+  .inner-hero-title
+    color: #585858
+
+    &:after
+      background: #626262
+
+  ul
+    max-width: 550px
+    list-style: none
+    padding: 0
+    margin: 96px auto 0
+    color: #626262
+
+    li
+      margin-bottom: 42px
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap
+      align-items: flex-start
+
+      p
+        margin: 0
+        flex: 1
+
+    img
+      max-width: 100%
+      height: auto
+      // display: inline-block
+      // vertical-align: middle
+      margin-right: 20px

@@ -128,6 +128,7 @@ body
     padding: 0 20px
 
 .inner-section
+  min-height: 100vh
   padding: calc(62px + 3vh) 0
 
   &:nth-child(odd)
@@ -173,10 +174,17 @@ body
     display: table-cell
     vertical-align: middle
 
-  svg
-    margin-right: -80px
-
     @media screen and (max-width: 940px)
       display: block
       width: 100%
       text-align: center
+
+.u-mobile-hidden
+  @media screen and (max-width: 600px)
+    display: none !important
+
+.u-mobile-visible
+  display: none !important
+
+  @media screen and (max-width: 600px)
+    display: block !important

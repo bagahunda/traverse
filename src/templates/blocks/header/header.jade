@@ -17,12 +17,6 @@ mixin header()
           a.main-nav__item(href="#") products
           ul.main-nav__submenu
             li
-              a(href="#wind").submenu__item
-                img(src="assets/images/submenu-wind.png", alt="")
-                svg(width="14" height="14")
-                  use(xlink:href="#Wind")
-                span wind
-            li
               a(href="#hydro").submenu__item
                 img(src="assets/images/submenu-hydro.png", alt="")
                 svg(width="11" height="16")
@@ -34,6 +28,12 @@ mixin header()
                 svg(width="17" height="17")
                   use(xlink:href="#Solar")
                 span solar
+            li
+              a(href="#wind").submenu__item
+                img(src="assets/images/submenu-wind.png", alt="")
+                svg(width="14" height="14")
+                  use(xlink:href="#Wind")
+                span wind
         li
           a.main-nav__item(href="#solutions") solutions
         li
