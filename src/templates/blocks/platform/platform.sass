@@ -158,6 +158,17 @@
     &__text
       padding: 0
 
+.u-mobile-hidden
+
+  & + .bx-wrapper
+    display: none
+
+    @media screen and (max-width: 600px)
+      display: block
+
+  & + .bx-wrapper .bx-pager
+    bottom: -100px
+
 
 .platform2-features.u-mobile-visible
 
@@ -165,8 +176,6 @@
     width: 100%
     display: block
 
-  .bx-wrapper
-    display: none !important
 
   @media screen and (max-width: 600px)
     display: block

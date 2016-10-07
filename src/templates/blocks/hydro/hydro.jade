@@ -6,10 +6,10 @@ mixin hydro()
       p Small decriptive text facts about something that can be used in calculating, reasoning, or planning
 
       a.btn.btn--ghost(href="#") ARRANGE A DEMO
-      a.btn.btn--white(href="#") MORE INFO
+      a.btn.btn--white.js-show-modal(href="#" data-modal="hydro-modal") MORE INFO
       
-  +b.modal
-    a.modal__close(href="#")
+  +b.modal#hydro-modal
+    a.modal__close.js-close-modal(href="#")
       svg(width="25" height="25")
         use(xlink:href="#icon-close")
         

@@ -28,7 +28,16 @@
   height: calc(100% - 62px)
   background: #ffffff
   text-align: center
-  z-index: 10
+  transform: translateY(-20px)
+  transition: all 0.3s ease-in-out
+  opacity: 0
+  visibility: hidden
+  z-index: 11
+
+  &--visible
+    transform: translateY(0)
+    opacity: 1
+    visibility: visible
 
   &__close
     position: absolute
