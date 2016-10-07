@@ -27,6 +27,7 @@
   width: 100%
   height: calc(100% - 62px)
   background: #ffffff
+  text-align: center
   z-index: 10
 
   &__close
@@ -50,11 +51,16 @@
     &:after
       background: #626262
 
+  &__content
+    position: relative
+    padding-top: 96px
+
   ul
     max-width: 550px
     list-style: none
     padding: 0
-    margin: 96px auto 0
+    margin: 0 auto
+    text-align: left
     color: #626262
 
     li
@@ -74,3 +80,28 @@
       // display: inline-block
       // vertical-align: middle
       margin-right: 20px
+
+  .flex
+    width: 100%
+    max-width: 1600px
+    padding: 0 20px
+    justify-content: space-between
+
+    li
+      display: block
+      position: relative
+      width: calc((100% - 160px) / 5)
+
+      img
+        margin: 0
+        transition: all 0.3s ease-in-out
+
+  &__footer
+    margin-top: 64px
+
+.modal-enlarge
+  position: relative
+  box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.18)
+  transform: scale(2)
+  transition: all 0.3s ease-in-out
+  z-index: 11

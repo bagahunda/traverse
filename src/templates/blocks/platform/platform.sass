@@ -172,8 +172,10 @@
     display: block
 
 .bx-wrapper .bx-viewport
+  position: relative
   box-shadow: none
   border: none
+  z-index: 1
 
 .bx-wrapper .bx-pager.bx-default-pager a
   margin: 0 6px
@@ -185,8 +187,8 @@
 .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active
   background: $blue
 
-.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto
-  bottom: -100px
+// .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto
+//   bottom: -100px
 
 .bx-wrapper .bx-viewport
   background: transparent
