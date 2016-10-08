@@ -1,4 +1,4 @@
-# TOWER - front-end boilerplate
+# Traverse Landing
 
 ## Install
 

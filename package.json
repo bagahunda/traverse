@@ -1,7 +1,7 @@
 {
-  "name": "tower",
+  "name": "trvLanding",
   "version": "1.0.0",
-  "description": "A starter kit for layout building",
+  "description": "Traverse Landing Page",
   "main": "index.js",
   "scripts": {
     "gulp": "./node_modules/.bin/gulp",
@@ -9,16 +9,8 @@
     "prod": "gulp prod",
     "validate": "gulp validate"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bagahunda/tower.git"
-  },
-  "author": "Dmitriy Pochodnya (dmitriy.troy@gmail.com)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bagahunda/tower/issues"
-  },
-  "homepage": "https://github.com/bagahunda/tower#readme",
+  "author": "Traverse Pte Ltd",
+  "license": "Copyright (C) 2016 Traverse Pte Ltd",
   "devDependencies": {
     "browser-sync": "^2.12.12",
     "del": "^2.2.0",
