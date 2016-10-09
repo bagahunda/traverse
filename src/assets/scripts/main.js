@@ -36,10 +36,17 @@
 
       var winWithModal = $(window).width();
 
+      var scrollBarSize = winWithModal - winWithoutModal
+
       $('#' + target).addClass('modal--visible');
+
       $('body').css({
-        'margin-right': winWithModal - winWithoutModal
+        'margin-right': scrollBarSize
       });
+
+      $('div.header').css(
+        'padding-right', "+=" + scrollBarSize
+      );
 
     });
 
@@ -48,9 +55,10 @@
       e.preventDefault();
 
       $(this).parent('.modal').removeClass('modal--visible');
-      $('body').removeClass('modal-shown').css({
-        'margin-right': 0
-      });
+      setTimeout(function(){
+        $('body').removeClass('modal-shown').removeAttr('style');
+        $('div.header').removeAttr('style');
+      },300);
 
     });
 
