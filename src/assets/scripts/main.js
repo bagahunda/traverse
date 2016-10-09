@@ -3,6 +3,12 @@
 
   $(document).ready(function () {
 
+    //Intercom Initialization Starts
+    window.Intercom("boot", {
+      app_id: "ds5sau7l"
+    });
+    //Intercom Initialization Ends
+
     $('.modal .flex img').on('click', function() {
       if ($(this).hasClass('modal-enlarge')) {
         $(this).removeClass('modal-enlarge');
@@ -40,12 +46,16 @@
 
       $('#' + target).addClass('modal--visible');
 
-      $('body').css({
+      $('body, div.intercom-messenger-frame').css({
         'margin-right': scrollBarSize
       });
 
       $('div.header').css(
         'padding-right', "+=" + scrollBarSize
+      );
+
+      $('#intercom-container').contents().find('iframe.intercom-launcher-frame','div.intercom-messenger-frame').css(
+        'margin-right', "+=" + scrollBarSize
       );
 
     });
@@ -56,8 +66,9 @@
 
       $(this).parent('.modal').removeClass('modal--visible');
       setTimeout(function(){
-        $('body').removeClass('modal-shown').removeAttr('style');
+        $('body, div.intercom-messenger-frame').removeClass('modal-shown').removeAttr('style');
         $('div.header').removeAttr('style');
+        $('#intercom-container').contents().find('iframe.intercom-launcher-frame').removeAttr('style');
       },300);
 
     });
