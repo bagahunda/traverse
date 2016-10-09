@@ -40,12 +40,16 @@ requireTask('templates:prod', './tasks/templates-prod', {
   src: './src/templates/pages/*.jade'
 });
 
-requireTask('images', './tasks/images', {
+requireTask('tinifyimages', './tasks/tinifyimages', {
   src: './src/assets/images/*.{png,jpg}'
 });
 
 requireTask('fonts', './tasks/fonts', {
   src: './src/assets/fonts/**/*'
+});
+
+requireTask('copyimages', './tasks/copyimages', {
+  src: './src/assets/images/**/*'
 });
 
 requireTask('zip', './tasks/zip', {
@@ -64,18 +68,23 @@ requireTask('validate', './tasks/validate', {
   src: './dist/*.html'
 });
 
+requireTask('copyfavicons', './tasks/copyfavicons', {
+  src: './src/assets/images/favicons/**/*'
+});
+
 gulp.task('watch', function() {
   gulp.watch(['./src/assets/styles/*.sass', './src/templates/blocks/**/*.sass'], gulp.series('styles:dev'));
   gulp.watch(['./src/assets/scripts/*.js', './src/templates/blocks/**/*.js'], gulp.series('scripts:dev'));
   gulp.watch('./src/templates/**/*.jade', gulp.series('templates:dev'));
   gulp.watch('./src/assets/images/svg/*.svg', gulp.series('svg'));
-  gulp.watch('./src/assets/images/*.{png,jpg}', gulp.series('images'));
+  gulp.watch('./src/assets/images/*.{png,jpg}', gulp.series('tinifyimages'));
+  gulp.watch('./src/assets/images/*.{png,jpg}', gulp.series('copyimages'));
   gulp.watch('./src/assets/fonts/**/*', gulp.series('fonts'));
 })
 
 gulp.task('build:dev', gulp.series(
   'clean',
-  gulp.parallel('styles:dev', 'scripts:dev', 'templates:dev', 'svg', 'images', 'fonts'))
+  gulp.parallel('styles:dev', 'scripts:dev', 'templates:dev', 'svg', 'fonts', 'copyimages', 'copyfavicons'))
 );
 
 gulp.task('dev', gulp.series(
@@ -84,7 +93,7 @@ gulp.task('dev', gulp.series(
 
 gulp.task('build:prod', gulp.series(
   'clean',
-  gulp.parallel('styles:prod', 'scripts:prod', 'templates:prod', 'svg', 'images', 'fonts'))
+  gulp.parallel('styles:prod', 'scripts:prod', 'templates:prod', 'svg', 'tinifyimages', 'fonts', 'copyfavicons'))
 );
 
 gulp.task('prod', gulp.series(
