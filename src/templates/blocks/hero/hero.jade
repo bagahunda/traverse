@@ -6,8 +6,13 @@ mixin hero()
         h1 REDEFINE FEASIBILITY
         p Traverse helps infrastructure developers simulate the economic outcome of every possible project configuration.
         
-        a.btn.btn--ghost(href="#") REQUEST DEMO
+        a.btn.btn--ghost.js-show-modal(href="#" data-modal="request-demo") REQUEST DEMO
         
       +e('a href="#platform"').mouse
         svg(width="21" height="26")
           use(xlink:href="#mouse")
+          
+  +b.modal#request-demo
+    a.modal__close.js-close-modal(href="#")
+      svg(width="25" height="25")
+        use(xlink:href="#icon-close")
