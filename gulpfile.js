@@ -77,7 +77,6 @@ gulp.task('watch', function() {
   gulp.watch(['./src/assets/scripts/*.js', './src/templates/blocks/**/*.js'], gulp.series('scripts:dev'));
   gulp.watch('./src/templates/**/*.jade', gulp.series('templates:dev'));
   gulp.watch('./src/assets/images/svg/*.svg', gulp.series('svg'));
-  gulp.watch('./src/assets/images/*.{png,jpg}', gulp.series('tinifyimages'));
   gulp.watch('./src/assets/images/*.{png,jpg}', gulp.series('copyimages'));
   gulp.watch('./src/assets/fonts/**/*', gulp.series('fonts'));
 })
