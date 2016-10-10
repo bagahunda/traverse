@@ -16,6 +16,7 @@
     setTimeout(function(){
       $('.hero__bg').css({
         'background-image': 'url("assets/images/' + image + '")'
+
       });
     }, 500);
 
@@ -27,7 +28,7 @@
     console.log("hero");
     setInterval(function() {
       randomHeroBg();
-    }, 4000);
+    }, 3000);
 
   });
 

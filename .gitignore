@@ -36,6 +36,9 @@ Thumbs.db
 .svn
 bower_components
 
+# Gulp
+.gulp
+
 # Node.JS
 node_modules
 npm-debug.log
