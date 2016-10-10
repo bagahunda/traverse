@@ -3,11 +3,11 @@
   var image = '';
 
   function randomHeroBg () {
-    var images = ['hyhero1.jpg', 'hyhero2.jpg', 'hyhero3.jpg', 'hyhero4.jpg', 'hyhero5.jpg', 'hyhero6.jpg', 'hyhero7.jpg', 'hyhero8.jpg', 'hyhero9.jpg']
+    var images = ['hyhero1.jpg', 'hyhero2.jpg', 'hyhero3.jpg', 'hyhero4.jpg', 'hyhero5.jpg', 'hyhero6.jpg', 'hyhero7.jpg', 'hyhero8.jpg']
 
-    var rand = Math.floor(Math.random() * 9);
+    var rand = Math.floor(Math.random() * 8);
     if (image === images[rand]) {
-      rand = Math.floor(Math.random() * 9);
+      rand = Math.floor(Math.random() * 8);
     }
     image = images[rand];
 
@@ -28,7 +28,7 @@
     console.log("hero");
     setInterval(function() {
       randomHeroBg();
-    }, 3000);
+    }, 8000);
 
   });
 
