@@ -3,15 +3,112 @@
   color: #3B3B41
   background: #ffffff !important
 
-  &__content
+  .hero__content
     display: flex
     flex-direction: column
     justify-content: center
+    align-items: center
     flex: 1
 
   p
     color: #1D1D1D
 
 .contacts-footer
-  padding: 55px 0 31px
+  padding: 51px 0 31px 8.25em
   background: #2B2B3D
+  text-align: left
+
+  @media screen and (max-width: 940px)
+    padding: 51px 0 45px 88px
+
+  @media screen and (max-width: 600px)
+    display: none
+
+  &__left
+    width: 30%
+    float: left
+
+    @media screen and (max-width: 940px)
+      width: 100%
+      margin-bottom: 49px
+
+    .footer-menu + .footer-menu
+      @media screen and (max-width: 940px)
+        width: 70%
+
+      @media screen and (max-width: 650px)
+        width: 60%
+
+  &__right
+    width: 47%
+    float: right
+
+    @media screen and (max-width: 940px)
+      width: 100%
+
+  &__bottom
+    padding-right: 8.25em
+    margin-top: 33px
+
+    @media screen and (max-width: 940px)
+      padding-right: 88px
+
+.footer-menu
+  float: left
+  margin: 0
+  padding: 0
+  list-style: none
+  line-height: 28px
+  color: #ffffff
+
+  &__title
+    $font-family: $din-pro-medium
+    font-size: rem(14px)
+    text-transform: uppercase
+
+  &__link
+    color: #ffffff
+    text-decoration: none
+    font-size: rem(14px)
+
+  &--blog
+    width: 70%
+    float: right
+
+    @media screen and (max-width: 650px)
+      width: 60%
+
+.footer-menu + .footer-menu
+  float: right
+
+.footer-blog-link
+  display: inline-block
+  padding-right: 32%
+  font-size: 14px
+  text-decoration: none
+  color: #ffffff
+
+.footer-menu-blog__title
+  font-family: $din-pro-medium
+  font-size: rem(24px)
+  color: #ffffff
+  text-transform: uppercase
+
+.footer-bottom-menu
+  line-height: 20px
+  li
+    display: inline-block
+
+    &:not(:last-child)
+      margin-right: 24px
+
+.footer-bottom-link
+  display: inline-block
+  height: 20px
+  line-height: 20px
+  font-size: 14px
+  color: rgba(255, 255, 255, 0.64)
+  text-decoration: none
+
+  use
+    fill: rgba(255, 255, 255, 0.58)
