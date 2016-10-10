@@ -25,10 +25,11 @@
   }
 
   $(document).ready(function () {
-    console.log("hero");
     setInterval(function() {
       randomHeroBg();
     }, 8000);
+
+    $('select').niceSelect();
 
   });
 

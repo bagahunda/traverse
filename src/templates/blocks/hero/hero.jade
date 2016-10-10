@@ -16,3 +16,79 @@ mixin hero()
     a.modal__close.js-close-modal(href="#")
       svg(width="25" height="25")
         use(xlink:href="#icon-close")
+        
+    +e.header
+      h1.inner-hero-title request a demo
+      p Fill out this quick form to sign up for a demonstration of the platform. We'll get back to you soon!
+      
+    +e.content
+      form.demo-form(action="#")
+        span.demo-form__title Best Day and Time for Demo (select one or more)
+        select.form-control
+          option(data-display="Select day")
+          option(value="sunday") Sunday
+          option(value="monday") Monday
+          option(value="tuesday") Tuesday
+          option(value="wednesday") Wednesday
+          option(value="thursday") Thursday
+          option(value="friday") Friday
+          option(value="saturday") Saturday
+          option(value="any-day") Any Day
+        select.form-control
+          option(data-display="Select time")
+            option(value="911") 9AM - 11AM
+            option(value="111") 11AM - 1PM
+            option(value="13") 1PM - 3PM
+            option(value="35") 3PM - 5PM
+            option(value="58") 5PM - 8PM
+            option(value="8") > 8PM
+            option(value="any-time") Any Time
+        .demo-form__day
+          .demo-form__select
+            input#sunday(type="checkbox")
+            label.demo-form__select__label(for="sunday") Sunday
+          .demo-form__select
+            input#monday(type="checkbox")
+            label.demo-form__select__label(for="monday") Monday
+          .demo-form__select
+            input#tuesday(type="checkbox")
+            label.demo-form__select__label(for="tuesday") Tuesday
+          .demo-form__select
+            input#wednesday(type="checkbox")
+            label.demo-form__select__label(for="wednesday") Wednesday
+          .demo-form__select
+            input#thursday(type="checkbox")
+            label.demo-form__select__label(for="thursday") Thursday
+          .demo-form__select
+            input#friday(type="checkbox")
+            label.demo-form__select__label(for="friday") Friday
+          .demo-form__select
+            input#saturday(type="checkbox")
+            label.demo-form__select__label(for="saturday") Saturday
+            
+        .demo-form__day
+          .demo-form__select
+            input#911(type="checkbox")
+            label.demo-form__select__label(for="911") 9AM - 11AM
+          .demo-form__select
+            input#111(type="checkbox")
+            label.demo-form__select__label(for="111") 11AM - 1PM
+          .demo-form__select
+            input#13(type="checkbox")
+            label.demo-form__select__label(for="13") 1PM - 3PM
+          .demo-form__select
+            input#35(type="checkbox")
+            label.demo-form__select__label(for="35") 3PM - 5PM
+          .demo-form__select
+            input#58(type="checkbox")
+            label.demo-form__select__label(for="58") 5PM - 8PM
+          .demo-form__select
+            input#8(type="checkbox")
+            label.demo-form__select__label(for="8") > 8PM
+            
+        input.form-control(type="text" placeholder="Full Name")
+        input.form-control(type="text" placeholder="Company Name")
+        input.form-control(type="text" placeholder="Skype or Phone Number")
+        input.form-control(type="text" placeholder="Email Address")
+        textarea.form-control(placeholder="Any other questions  or special requests?")
+        button.btn submit
