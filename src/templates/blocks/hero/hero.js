@@ -7,10 +7,10 @@
   function randomHeroBg () {
     var i = 1;
     return function setBg() {
-      $('.hero__bg').fadeOut(2000, function() {
+      $('.hero__bg').fadeOut(1000, function() {
         $(this).css({
           'background-image': 'url("assets/images/' + images[i] + '")'
-        }).fadeIn(2000);
+        }).fadeIn(1000);
       });
       i++;
       if (i === 8) {
