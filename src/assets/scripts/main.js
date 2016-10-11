@@ -48,13 +48,13 @@
 
       $('#' + target).addClass('modal--visible');
 
-      $('body, div.intercom-messenger-frame').css({
-        'margin-right': scrollBarSize
-      });
-
       $('div.header').css(
         'padding-right', "+=" + scrollBarSize
       );
+
+      $('body, div.intercom-messenger-frame').css({
+        'margin-right': scrollBarSize
+      });
 
       $('#intercom-container').contents().find('iframe.intercom-launcher-frame','div.intercom-messenger-frame').css(
         'margin-right', "+=" + scrollBarSize
