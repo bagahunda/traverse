@@ -9,7 +9,7 @@
 
     &:not(:last-child)
       @media screen and (max-width: 940px)
-        margin-bottom: 83px
+        margin-bottom: 43px
 
   &__features
     @include span-columns(8 of 12)
@@ -22,8 +22,7 @@
 
     .feature
       @include span-columns(6 of 12)
-      padding-top: 46px
-      margin-bottom: 83px
+      margin-bottom: 43px
 
       @media screen and (max-width: 940px)
         width: 50%
@@ -67,7 +66,7 @@
 
   &__img
     position: relative
-    padding-top: 100%
+    padding-top: 80%
     overflow: hidden
 
     img
@@ -102,11 +101,16 @@
     float: none
 
   &:not(:last-child)
-    margin-bottom: 83px
+    margin-bottom: 43px
+
+  &__img
+    svg
+      height: 82px
 
   &__title
-    margin: 19px 0 11px
+    margin: 15px 0 11px
     font-family: $din-pro-medium
+    font-size: 16px
     text-transform: uppercase
 
   &__text
