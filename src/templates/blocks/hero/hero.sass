@@ -20,6 +20,8 @@
     background-repeat: no-repeat
     background-size: cover
     z-index: 1
+    transition: all 0.3s ease-in-out
+    // animation: heroBg 64s infinite
 
   &__content
     z-index: 2
@@ -43,6 +45,39 @@
     use
       fill: #ffffff
 
+.modal__cover
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, 0.5)
+
+.modal__container
+  width: 80%
+  height: 90%
+  position: fixed
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  background: #ffffff
+  overflow-y: auto
+
+  .modal__header
+    padding: 20px 20px 0
+
+    p
+      margin: 20px auto 0
+      font-size: rem(16px)
+
+  .modal__close
+    top: 20px
+    right: 20px
+    z-index: 2
+
+  .inner-hero-title
+    font-size: rem(24px)
+
 .demo-form
   margin: 0 auto
   padding-bottom: 20px
@@ -59,7 +94,7 @@
     flex-wrap: nowrap
     align-items: stretch
     line-height: 50px
-    background: #D3E5F7
+    background: #B9B9B9
 
     @media screen and (max-width: 611px)
       display: none
@@ -83,10 +118,11 @@
           font-size: 14px
 
         &:hover
-          background: $blue
+          background: #EAF5FF
 
       &:checked + label
         background: $blue
+        color: #ffffff
 
   .nice-select
     display: none
