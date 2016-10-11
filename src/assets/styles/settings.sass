@@ -51,6 +51,8 @@ body
 
 .btn
   display: inline-block
+  position: relative
+  margin: 20px 0
   padding: 6px 26px
   background: $blue
   color: #ffffff
@@ -73,10 +75,22 @@ body
     padding: 12px 25px 14px
     font-size: 18px
 
+  &__spinner
+    @include loader
+    opacity: 0
+    pointer-events: none
+
+  &.loading
+    color: $blue
+
+  &.loading &__spinner
+    opacity: 1
+
 .btn--header-search
   width: 127px
   height: 32px
   padding: 0
+  margin: 0
   position: absolute
   right: 0
   top: 0
@@ -156,26 +170,6 @@ body
     bottom: 93px
   100%
     bottom: 83px
-
-@keyframes heroBg
-  0%
-    background-image: url('../images/bg-home.jpg')
-  12%
-    background-image: url('../images/hyhero1.jpg')
-  24%
-    background-image: url('../images/hyhero2.jpg')
-  36%
-    background-image: url('../images/hyhero3.jpg')
-  48%
-    background-image: url('../images/hyhero4.jpg')
-  60%
-    background-image: url('../images/hyhero5.jpg')
-  72%
-    background-image: url('../images/hyhero6.jpg')
-  84%
-    background-image: url('../images/hyhero7.jpg')
-  100%
-    background-image: url('../images/hyhero8.jpg')
 
 .u-table-layout
   display: table

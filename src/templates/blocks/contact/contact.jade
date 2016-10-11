@@ -1,5 +1,5 @@
 mixin contact()
-  +b('section').hero.hero--contact#contact
+  +b('section').hero--contact#contact
     +e.content
       h1.inner-hero-title GET IN TOUCH
       p We can Help Answer Your Questions
@@ -7,67 +7,68 @@ mixin contact()
       a.btn.btn--ghost.u-color-black(href="#") CONTACT US
     
     +b.contacts-footer
-      +e.top.clearfix
-        +e.left.clearfix
-          ul.footer-menu
-            li
-              span.footer-menu__title product
-            li
-              a.footer-menu__link(href="#") Hydropower
-            li
-              a.footer-menu__link(href="#") Solar PV
-            li
-              a.footer-menu__link(href="#") Wind
-            li
-              a.footer-menu__link(href="#") Customized Solutions
+      .inner-container
+        +e.top.clearfix
+          +e.left.clearfix
+            ul.footer-menu
+              li
+                span.footer-menu__title product
+              li
+                a.footer-menu__link(href="#") Hydropower
+              li
+                a.footer-menu__link(href="#") Solar PV
+              li
+                a.footer-menu__link(href="#") Wind
+              li
+                a.footer-menu__link(href="#") Customized Solutions
+                
+            ul.footer-menu
+              li
+                span.footer-menu__title resources
+              li
+                a.footer-menu__link(href="#") Get a Demo
+              li
+                a.footer-menu__link(href="#") Documentation
+                
+          +e.right.clearfix
+            ul.footer-menu
+              li
+                span.footer-menu__title company
+              li
+                a.footer-menu__link(href="#") About
+              li
+                a.footer-menu__link(href="#") Careers
+              li
+                a.footer-menu__link(href="#") Contact Us
+                
+            ul.footer-menu.footer-menu--blog
+              li
+                span.footer-menu-blog__title From the blog
+                hr.footer-sep
+              li
+                a.footer-blog-link(href="#") What software companies can learn from shopping centers
+              li
+                a.footer-blog-link(href="#") Q&A: How do you create a culture in a customer support team?
               
-          ul.footer-menu
+        +e.bottom.clearfix
+          ul.footer-menu.footer-bottom-menu
             li
-              span.footer-menu__title resources
+              a.footer-bottom-link(href="#") Terms
             li
-              a.footer-menu__link(href="#") Get a Demo
+              a.footer-bottom-link(href="#") Privacy
             li
-              a.footer-menu__link(href="#") Documentation
+              a.footer-bottom-link(href="mailto:team@traverse.ai") team@traverse.ai
               
-        +e.right.clearfix
-          ul.footer-menu
+          ul.footer-menu.footer-bottom-menu
             li
-              span.footer-menu__title company
+              a.footer-bottom-link(href="#")
+                svg(width="20" height="20")
+                  use(xlink:href="#icon-facebook")
             li
-              a.footer-menu__link(href="#") About
+              a.footer-bottom-link(href="#")
+                svg(width="20" height="20")
+                  use(xlink:href="#icon-twitter")
             li
-              a.footer-menu__link(href="#") Careers
-            li
-              a.footer-menu__link(href="#") Contact Us
-              
-          ul.footer-menu.footer-menu--blog
-            li
-              span.footer-menu-blog__title From the blog
-              hr.footer-sep
-            li
-              a.footer-blog-link(href="#") What software companies can learn from shopping centers
-            li
-              a.footer-blog-link(href="#") Q&A: How do you create a culture in a customer support team?
-            
-      +e.bottom.clearfix
-        ul.footer-menu.footer-bottom-menu
-          li
-            a.footer-bottom-link(href="#") Terms
-          li
-            a.footer-bottom-link(href="#") Privacy
-          li
-            a.footer-bottom-link(href="mailto:team@traverse.ai") team@traverse.ai
-            
-        ul.footer-menu.footer-bottom-menu
-          li
-            a.footer-bottom-link(href="#")
-              svg(width="20" height="20")
-                use(xlink:href="#icon-facebook")
-          li
-            a.footer-bottom-link(href="#")
-              svg(width="20" height="20")
-                use(xlink:href="#icon-twitter")
-          li
-            a.footer-bottom-link(href="#")
-              svg(width="20" height="20")
-                use(xlink:href="#icon-linkedin")
+              a.footer-bottom-link(href="#")
+                svg(width="20" height="20")
+                  use(xlink:href="#icon-linkedin")

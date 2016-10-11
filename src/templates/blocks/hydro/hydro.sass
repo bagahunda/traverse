@@ -1,5 +1,12 @@
 #hydro
-  height: 50vh;
+  height: 50vh
+
+  @media screen and (max-width: 940px)
+    height: 100vh
+
+  @media screen and (max-height: 850px)
+    height: auto
+    padding: 60px 0
 
 .hero__hydro-bg
   position: absolute
@@ -118,3 +125,6 @@
   transform: scale(2)
   transition: all 0.3s ease-in-out
   z-index: 11
+
+.modal--with-overlay
+  background: transparent

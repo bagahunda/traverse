@@ -48,6 +48,15 @@
     //   }
     // });
 
+    // Get started form
+    $('.get-started-form').on('submit', function(e) {
+      e.preventDefault();
+      $(this).find('.btn').addClass('loading');
+      setTimeout(function() {
+        $('.btn.loading').removeClass('loading');
+      }, 2000);
+    });
+
   });
 
 }(jQuery));

@@ -37,3 +37,30 @@
       @content
     &::-webkit-input-placeholder
       @content
+
+// Spinner
+// Usage:
+// .your-loader {
+//    @include loader;
+// }
+@mixin loader($size: 20px, $color: #ffffff, $border-size: 4px, $duration: 1s)
+  width: $size
+  height: $size
+  position: absolute
+  left: 50%
+  top: 50%
+  margin-top: -10px
+  margin-right: -10px
+  border: $border-size solid rgba($color, 0.25)
+  border-top-color: $color
+  border-radius: 50%
+  animation: loader-rotate $duration linear infinite
+  @include loader-rotate;
+
+@mixin loader-rotate
+  @keyframes loader-rotate
+    0%
+      transform: rotate(0);
+
+    100%
+      transform: rotate(360deg);

@@ -1,7 +1,10 @@
 .hero--contact
-  justify-content: flex-start
   color: #3B3B41
   background: #ffffff !important
+
+  @media screen and (max-width: 600px)
+    height: auto
+    padding: 60px 0 0
 
   .hero__content
     display: flex
@@ -10,11 +13,14 @@
     align-items: center
     flex: 1
 
+    @media screen and (max-width: 600px)
+      margin-bottom: 60px
+
   p
     color: #1D1D1D
 
 .contacts-footer
-  padding: 51px 0 31px 8.25em
+  padding: 51px 0 31px 0
   background: #2B2B3D
   text-align: left
 

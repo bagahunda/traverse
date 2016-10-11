@@ -42,8 +42,9 @@ mixin header()
           a.main-nav__item(href="#") login
           
       .header__email
-        form
+        form.get-started-form
           input(type="email" name="email" id="email" placeholder="Enter email")
           button(type="submit").btn.btn--header-search get started
+            span.btn__spinner
         
     .cover
