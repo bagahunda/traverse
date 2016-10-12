@@ -1,16 +1,19 @@
 mixin contact()
-  +b('section').hero--contact#contact
-    +e.content
-      h1.inner-hero-title GET IN TOUCH
-      p We can Help Answer Your Questions
-      
-      a.btn.btn--ghost.u-color-black(href="#") CONTACT US
-    
+  section.inner-section.hero--contact#contact
+    .platform-header
+      h1.section-header GET IN TOUCH
+
+      .header__email
+        form.get-started-form
+          input(type="email" name="email" id="email" placeholder="Enter email")
+          button(type="submit").btn.btn--header-search get started
+            span.btn__spinner
+
     +b.contacts-footer
       .inner-container
         +e.top.clearfix
           +e.left.clearfix
-            ul.footer-menu
+            ul.footer-menu.footer-menu--normal
               li
                 span.footer-menu__title product
               li
@@ -21,17 +24,16 @@ mixin contact()
                 a.footer-menu__link(href="#") Wind
               li
                 a.footer-menu__link(href="#") Customized Solutions
-                
-            ul.footer-menu
+
+            ul.footer-menu.footer-menu--normal
               li
                 span.footer-menu__title resources
               li
                 a.footer-menu__link(href="#") Get a Demo
               li
                 a.footer-menu__link(href="#") Documentation
-                
-          +e.right.clearfix
-            ul.footer-menu
+
+            ul.footer-menu.footer-menu--normal
               li
                 span.footer-menu__title company
               li
@@ -40,7 +42,7 @@ mixin contact()
                 a.footer-menu__link(href="#") Careers
               li
                 a.footer-menu__link(href="#") Contact Us
-                
+
             ul.footer-menu.footer-menu--blog
               li
                 span.footer-menu-blog__title From the blog
@@ -49,7 +51,7 @@ mixin contact()
                 a.footer-blog-link(href="#") What software companies can learn from shopping centers
               li
                 a.footer-blog-link(href="#") Q&A: How do you create a culture in a customer support team?
-              
+
         +e.bottom.clearfix
           ul.footer-menu.footer-bottom-menu
             li
@@ -58,7 +60,7 @@ mixin contact()
               a.footer-bottom-link(href="#") Privacy
             li
               a.footer-bottom-link(href="mailto:team@traverse.ai") team@traverse.ai
-              
+
           ul.footer-menu.footer-bottom-menu
             li
               a.footer-bottom-link(href="#")
