@@ -92,7 +92,7 @@ gulp.task('dev', gulp.series(
 
 gulp.task('build:prod', gulp.series(
   'clean',
-  gulp.parallel('styles:prod', 'scripts:prod', 'templates:prod', 'svg', 'tinifyimages', 'fonts', 'copyfavicons'))
+  gulp.parallel('styles:prod', 'scripts:prod', 'templates:prod', 'svg', 'copyimages', 'fonts', 'copyfavicons'))
 );
 
 gulp.task('prod', gulp.series(
