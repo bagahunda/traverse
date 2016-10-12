@@ -1,6 +1,13 @@
 .hero--contact
   color: #3B3B41
   min-height: 40vh
+  text-align: center
+
+  .btn--header-search
+    @media screen and (max-width: 940px)
+      right: auto
+      left: 50%
+      transform: translateX(-50%)
 
   .platform-header
     margin-bottom: 100px
@@ -9,6 +16,9 @@
     margin: 45px auto 0
     width: $getStarted-width-contact
     height: $getStarted-height-contact
+
+    @media screen and (max-width: 410px)
+      width: 100%
 
     input
       width: $getStarted-width-contact
