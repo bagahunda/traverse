@@ -1,6 +1,6 @@
 mixin hero()
   .section
-    +b('section').hero
+    +b('section').hero--main
       +e.bg
       +e.content
         h1 REDEFINE FEASIBILITY
@@ -21,7 +21,7 @@ mixin hero()
 
       +e.header
         h1.inner-hero-title request a demo
-        p Fill out this quick form to sign up for a demonstration of the platform. We'll get back to you soon!
+        p.u-mobile-hidden Fill out this quick form to sign up for a demonstration of the platform. We'll get back to you soon!
 
       +e.content
         form.demo-form(action="#")
@@ -87,7 +87,7 @@ mixin hero()
 
           input.form-control(type="text" placeholder="Full Name")
           input.form-control(type="text" placeholder="Company Name")
-          input.form-control(type="text" placeholder="Skype or Phone Number")
+          input.form-control.u-mobile-hidden(type="text" placeholder="Skype or Phone Number")
           input.form-control(type="text" placeholder="Email Address")
-          textarea.form-control(placeholder="Any other questions  or special requests?")
+          textarea.form-control.u-mobile-hidden(placeholder="Any other questions  or special requests?")
           button.btn submit

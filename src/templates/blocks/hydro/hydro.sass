@@ -55,6 +55,9 @@
     top: 32px
     right: 82px
 
+  &__slide
+    padding-bottom: 20px
+
   &__header
     padding: 57px 20px 0
     font-size: 22px
@@ -93,13 +96,19 @@
       p
         margin: 0
         flex: 1
+        font-size: rem(24px)
 
-    img
-      max-width: 100%
-      height: auto
-      // display: inline-block
-      // vertical-align: middle
-      margin-right: 20px
+        @media screen and (max-width: 940px)
+          font-size: rem(18px)
+
+    &:not(.flex)
+
+      img
+        width: 31px
+        height: auto
+        // display: inline-block
+        // vertical-align: middle
+        margin-right: 20px
 
   .flex
     width: 100%
@@ -138,6 +147,7 @@
   margin: 0 auto
 
 .bx-wrapper .bx-pager
+  position: relative
   z-index: 2
 
 .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto

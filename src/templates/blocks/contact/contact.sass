@@ -53,28 +53,52 @@
   text-align: left
 
   @media screen and (max-width: 1000px)
-    padding: 51px 0 45px 88px
+    padding: 51px 0 45px
 
-  @media screen and (max-width: 600px)
+  @media screen and (max-width: 560px)
     display: none
 
   &__left
     display: block
-    width: 100%
+    float: left
+    width: 40%
 
-    @media screen and (max-width: 1000px)
+    @media screen and (max-width: 700px)
       width: 100%
-      margin-bottom: 49px
 
-    @media screen and (max-width: 1000px)
+    .footer-menu:first-child
+      margin-right: 7vw
+
+      @media screen and (max-width: 940px)
+        margin-right: 5vw
+
+      @media screen and (max-width: 815px)
+        margin-right: 3vw
+
+      @media screen and (max-width: 740px)
+        margin-right: 1vw
+
+      @media screen and (max-width: 700px)
+        margin-right: 0
+        width: 30%
+
+  &__right
+    float: left
+    width: 60%
+
+    @media screen and (max-width: 700px)
       width: 100%
+      margin-top: 40px
+
+    .footer-menu--normal
+      width: 30%
 
   &__bottom
     margin-top: 60px
     margin-bottom: 40px
 
-    @media screen and (max-width: 1000px)
-      padding-right: 88px
+    // @media screen and (max-width: 1000px)
+    //   padding-right: 88px
 
 .footer-menu
   float: left
@@ -85,11 +109,9 @@
   line-height: 28px
   color: #0077d8
 
-  &--normal
-    width: 20%
-
   &--blog
-    width: 40%
+    width: 70%
+
 
   &__title
     $font-family: $din-pro-medium
@@ -117,13 +139,16 @@
   text-transform: uppercase
 
 .footer-bottom-menu
-  margin-right: 40px
+  // margin-right: 40px
   line-height: 20px
   li
     display: inline-block
 
     &:not(:last-child)
       margin-right: 24px
+
+.footer-bottom-menu + .footer-bottom-menu
+  float: right
 
 .footer-bottom-link
   display: inline-block
@@ -134,4 +159,4 @@
   text-decoration: none
 
   use
-    fill: rgba(255, 255, 255, 0.58)
+    fill: rgba(0, 119, 216, 0.58)

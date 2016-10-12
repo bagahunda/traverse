@@ -1,13 +1,13 @@
 mixin solutions()
   section.inner-section#solutions
     .platform-header
-      h2.section-header 
+      h2.section-header
         span CUSTOMIZED INFRASTRUCTURE
         |  SOLUTIONS
-      p.section-caption Small decriptive text facts about something that can be used in calculating, reasoning, or planning
-    
+      p.section-caption Small decriptive text facts about something that can be used in calculating, reasoning,&nbspor&nbspplanning
+
     .inner-container.cf
-      .js-bx-slider
+      .solutions.u-mobile-hidden
         .solutions__item
           +b.solutions-card
             +e.img
@@ -16,8 +16,8 @@ mixin solutions()
               | EARTH SCALE FEASIBILITY
             +e.content
               | Foru lines of text small Descriptive Text is more like 4 lines of text and not 1 line Foru lines of text small Descriptive Text is more like 4 lines of text and not 1 line Text is more like 4 lines of text and not 1 line Foru lines of text small Descriptive Text
-          
-        .solutions__item    
+
+        .solutions__item
           +b.solutions-card
             +e.img
               img(src="assets/images/solution-2.jpg", alt="")
@@ -25,4 +25,22 @@ mixin solutions()
               | EARTH SCALE ANALYTICS
             +e.content
               | Foru lines of text small Descriptive Text is more like 4 lines of text and not 1 line Foru lines of text small Descriptive Text is more like 4 lines of text and not 1 line Text is more like 4 lines of text and not 1 line Foru lines of text small Descriptive Text
-              
+
+      .solutions.u-mobile-visible.bx-slider
+        .solutions__item
+          +b.solutions-card
+            +e.img
+              img(src="assets/images/solution-1.jpg", alt="")
+            +e.header
+              | EARTH SCALE FEASIBILITY
+            +e.content
+              | Foru lines of text small Descriptive Text is more like 4 lines of text and not 1 line Foru lines of text small Descriptive Text is more like 4 lines of text and not 1 line Text is more like 4 lines of text and not 1 line Foru lines of text small Descriptive Text
+
+        .solutions__item
+          +b.solutions-card
+            +e.img
+              img(src="assets/images/solution-2.jpg", alt="")
+            +e.header
+              | EARTH SCALE ANALYTICS
+            +e.content
+              | Foru lines of text small Descriptive Text is more like 4 lines of text and not 1 line Foru lines of text small Descriptive Text is more like 4 lines of text and not 1 line Text is more like 4 lines of text and not 1 line Foru lines of text small Descriptive Text
