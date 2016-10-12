@@ -39,7 +39,7 @@
       randomHeroBg();
     }, 8000);
 
-    $('select').niceSelect();
+    $('select').select2();
 
   });
 

@@ -130,21 +130,6 @@
         background: $blue
         color: #ffffff
 
-  .nice-select
-    display: none
-    margin: 20px 0
-    float: none
-    background: #D3E5F7
-
-    @media screen and (max-width: 611px)
-      display: block
-
-  .nice-select.open .list
-    width: 100%
-
-  .nice-select .option
-    margin-bottom: 0
-
 .form-control
   width: 100%
   height: 40px
@@ -160,3 +145,15 @@ textarea.form-control
 
 #request-demo .modal__content
   padding-top: 40px
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice,
+.select2-container .select2-search--inline
+  margin-bottom: 0
+
+.select2-container
+  display: none
+  margin: 10px 0
+
+  @media screen and (max-width: 611px)
+    display: block
+    max-width: 100%

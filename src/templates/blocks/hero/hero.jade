@@ -26,7 +26,7 @@ mixin hero()
       +e.content
         form.demo-form(action="#")
           span.demo-form__title Best Day and Time for Demo (select one or more)
-          select.form-control
+          select.form-control(multiple="multiple")
             option(data-display="Select day")
             option(value="sunday") Sunday
             option(value="monday") Monday
@@ -36,7 +36,7 @@ mixin hero()
             option(value="friday") Friday
             option(value="saturday") Saturday
             option(value="any-day") Any Day
-          select.form-control
+          select.form-control(multiple="multiple")
             option(data-display="Select time")
               option(value="911") 9AM - 11AM
               option(value="111") 11AM - 1PM
