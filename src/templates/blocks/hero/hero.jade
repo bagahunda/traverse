@@ -5,24 +5,24 @@ mixin hero()
       +e.content
         h1 REDEFINE FEASIBILITY
         p Traverse helps infrastructure developers simulate the economic outcome of every possible project configuration.
-        
+
         a.btn.btn--ghost.js-show-modal(href="#" data-modal="request-demo") REQUEST DEMO
-        
+
       +e('a href="#platform"').mouse
         svg(width="21" height="26")
           use(xlink:href="#mouse")
-          
+
   +b.modal.modal--with-overlay#request-demo
     .modal__cover
     .modal__container
       a.modal__close.js-close-modal(href="#")
         svg(width="12" height="12")
           use(xlink:href="#icon-close")
-          
+
       +e.header
         h1.inner-hero-title request a demo
         p Fill out this quick form to sign up for a demonstration of the platform. We'll get back to you soon!
-        
+
       +e.content
         form.demo-form(action="#")
           span.demo-form__title Best Day and Time for Demo (select one or more)
@@ -48,26 +48,26 @@ mixin hero()
           .demo-form__day
             .demo-form__select
               input#sunday(type="checkbox")
-              label.demo-form__select__label(for="sunday") Sunday
+              label.demo-form__select__label(for="sunday") SUN
             .demo-form__select
               input#monday(type="checkbox")
-              label.demo-form__select__label(for="monday") Monday
+              label.demo-form__select__label(for="monday") MON
             .demo-form__select
               input#tuesday(type="checkbox")
-              label.demo-form__select__label(for="tuesday") Tuesday
+              label.demo-form__select__label(for="tuesday") TUE
             .demo-form__select
               input#wednesday(type="checkbox")
-              label.demo-form__select__label(for="wednesday") Wednesday
+              label.demo-form__select__label(for="wednesday") WED
             .demo-form__select
               input#thursday(type="checkbox")
-              label.demo-form__select__label(for="thursday") Thursday
+              label.demo-form__select__label(for="thursday") THUR
             .demo-form__select
               input#friday(type="checkbox")
-              label.demo-form__select__label(for="friday") Friday
+              label.demo-form__select__label(for="friday") FRI
             .demo-form__select
               input#saturday(type="checkbox")
-              label.demo-form__select__label(for="saturday") Saturday
-              
+              label.demo-form__select__label(for="saturday") SAT
+
           .demo-form__day
             .demo-form__select
               input#911(type="checkbox")
@@ -82,12 +82,9 @@ mixin hero()
               input#35(type="checkbox")
               label.demo-form__select__label(for="35") 3PM - 5PM
             .demo-form__select
-              input#58(type="checkbox")
-              label.demo-form__select__label(for="58") 5PM - 8PM
-            .demo-form__select
-              input#8(type="checkbox")
-              label.demo-form__select__label(for="8") > 8PM
-              
+              input#5(type="checkbox")
+              label.demo-form__select__label(for="5") > 5PM
+
           input.form-control(type="text" placeholder="Full Name")
           input.form-control(type="text" placeholder="Company Name")
           input.form-control(type="text" placeholder="Skype or Phone Number")

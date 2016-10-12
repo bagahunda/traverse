@@ -1,7 +1,22 @@
 .hero--contact
-  padding: 60px 0 0
   color: #3B3B41
-  background: #ffffff !important
+  min-height: 40vh
+
+  .platform-header
+    margin-bottom: 100px
+
+  .header__email
+    margin: 45px auto 0
+    width: $getStarted-width-contact
+    height: $getStarted-height-contact
+
+    input
+      width: $getStarted-width-contact
+      height: $getStarted-height-contact
+
+    button
+      width: $getStarted-button-width-contact
+      height: $getStarted-height-contact
 
   @media screen and (max-width: 600px)
     height: auto
@@ -17,13 +32,14 @@
     @media screen and (max-width: 600px)
       margin-bottom: 60px
 
+  hr
+    border-color: #00A0DF
   p
     color: #1D1D1D
     margin-bottom: 40px
 
 .contacts-footer
-  padding: 51px 0 31px 0
-  background: #2B2B3D
+  background: #FFFFFF
   text-align: left
 
   @media screen and (max-width: 1000px)
@@ -33,41 +49,37 @@
     display: none
 
   &__left
-    width: 25%
-    float: left
+    display: block
+    width: 100%
 
     @media screen and (max-width: 1000px)
       width: 100%
       margin-bottom: 49px
 
-    .footer-menu + .footer-menu
-      @media screen and (max-width: 1000px)
-        width: 70%
-
-      @media screen and (max-width: 650px)
-        width: 60%
-
-  &__right
-    width: 47%
-    float: right
-
     @media screen and (max-width: 1000px)
       width: 100%
 
   &__bottom
-    padding-right: 8.25em
-    margin-top: 33px
+    margin-top: 60px
+    margin-bottom: 40px
 
     @media screen and (max-width: 1000px)
       padding-right: 88px
 
 .footer-menu
   float: left
+  display: block
   margin: 0
   padding: 0
   list-style: none
   line-height: 28px
-  color: #ffffff
+  color: #0077d8
+
+  &--normal
+    width: 20%
+
+  &--blog
+    width: 40%
 
   &__title
     $font-family: $din-pro-medium
@@ -75,34 +87,27 @@
     text-transform: uppercase
 
   &__link
-    color: #ffffff
+    color: #0077d8
     text-decoration: none
     font-size: rem(14px)
-
-  &--blog
-    width: 70%
-    float: right
 
     @media screen and (max-width: 650px)
       width: 60%
 
-.footer-menu + .footer-menu
-  float: right
-
 .footer-blog-link
   display: inline-block
-  padding-right: 32%
   font-size: 14px
   text-decoration: none
-  color: #ffffff
+  color: #0077d8
 
 .footer-menu-blog__title
   font-family: $din-pro-medium
   font-size: rem(24px)
-  color: #ffffff
+  color: #0077d8
   text-transform: uppercase
 
 .footer-bottom-menu
+  margin-right: 40px
   line-height: 20px
   li
     display: inline-block
@@ -115,7 +120,7 @@
   height: 20px
   line-height: 20px
   font-size: 14px
-  color: rgba(255, 255, 255, 0.64)
+  color: #0077d8
   text-decoration: none
 
   use

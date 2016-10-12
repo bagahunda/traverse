@@ -18,6 +18,18 @@ $din-pro-regular: 'DINPro-Regular'
 $blender-pro-medium: 'Blender Pro'
 //-- typo:end --//
 
+//-- Header Get Started Width and Height --//
+$getStarted-height-header: 32px
+$getStarted-width-header: 289px
+$getStarted-button-width-header: 127px
+//-- Header Get Started Width and Height --//
+
+//-- Contact Get Started Width and Height --//
+$getStarted-height-contact: 45px
+$getStarted-width-contact: 370px
+$getStarted-button-width-contact: 120px
+//-- Contact Get Started Width and Height --//
+
 html
   box-sizing: border-box
   height: 100%
@@ -87,8 +99,8 @@ body
     opacity: 1
 
 .btn--header-search
-  width: 127px
-  height: 32px
+  width: $getStarted-button-width-header
+  height: $getStarted-height-header
   padding: 0
   margin: 0
   position: absolute
@@ -136,8 +148,8 @@ body
     padding: 0 20px
 
 .inner-section
-  min-height: 100vh
-  padding: calc(62px + 3vh) 0
+  min-height: 80vh
+  padding: calc(50px + 3vh) 0
 
   &:nth-child(odd)
     background-color: #F4F7F9
