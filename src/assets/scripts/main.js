@@ -62,7 +62,7 @@
 
     });
 
-    $('.js-close-modal, .modal__cover').on('click', function (e) {
+    $('.js-close-modal').on('click', function (e) {
 
       e.preventDefault();
 
