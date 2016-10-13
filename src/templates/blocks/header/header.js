@@ -18,6 +18,7 @@
 
     //Show and hide mobile nav
     $('.js-mobile-menu').on('click', function (e) {
+      e.preventDefault();
       var target = $('.main-nav');
       var cover = $('.cover')
       if (target.hasClass('nav--is-shown')) {

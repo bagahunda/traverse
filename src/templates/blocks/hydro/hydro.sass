@@ -78,6 +78,9 @@
     position: relative
     padding: 96px 20px 0
 
+    @media screen and (max-height: 914px)
+      padding: 36px 20px 0
+
   ul
     max-width: 550px
     list-style: none
@@ -87,16 +90,19 @@
     color: #626262
 
     li
-      margin-bottom: 42px
       display: flex
       flex-direction: row
       flex-wrap: nowrap
       align-items: flex-start
 
+      &:not(:last-child)
+        margin-bottom: 42px
+
       p
         margin: 0
         flex: 1
-        font-size: rem(24px)
+        font-size: rem(18px)
+        text-align: justify
 
         @media screen and (max-width: 940px)
           font-size: rem(18px)
@@ -117,6 +123,7 @@
     justify-content: space-between
 
     li
+      margin-bottom: 0 !important
       display: block
       position: relative
       width: calc((100% - 160px) / 5)

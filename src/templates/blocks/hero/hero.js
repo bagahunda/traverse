@@ -5,17 +5,29 @@
 
 
   function randomHeroBg () {
-    var i = -1; //set to -1 because of the initial fallback image bg-home.jpg (not inside the images[] array) loads first and increases i by 1.
-    return function setBg() {
-      $('.hero__bg').fadeOut(1000, function() {
-        $(this).css({
-          'background-image': 'url("assets/images/' + images[i] + '")'
-        }).fadeIn(1000);
+
+    for (var i = 0; i < images.length; i++) {
+      var bgItem = '<div class="hero-bg__item-' + i + '"></div>';
+      $('.hero__bg').append(bgItem);
+      $('.hero-bg__item-' + i).css({
+        'background-image': 'url("assets/images/' + images[i] + '")'
       });
-      i++;
-      if (i === 7) {
-        i = 0;
-      }
+    }
+
+    return function setBg() {
+      $(".hero__bg div").first().appendTo('.hero__bg').fadeOut(1500);
+      $(".hero__bg div").first().fadeIn(1500);
+      setTimeout(setBg, 7000);
+
+      // $('.hero__bg').fadeOut(1000, function() {
+      //   $(this).css({
+      //     'background-image': 'url("assets/images/' + images[i] + '")'
+      //   }).fadeIn(1000);
+      // });
+      // i++;
+      // if (i === 7) {
+      //   i = 0;
+      // }
     }
     // var rand = Math.floor(Math.random() * 8);
     // if (image === images[rand]) {
@@ -35,9 +47,11 @@
 
   var randomHeroBg = randomHeroBg();
   $(document).ready(function () {
-    setInterval(function() {
-      randomHeroBg();
-    }, 7000);
+    // setInterval(function() {
+    //   randomHeroBg();
+    // }, 7000);
+
+    randomHeroBg();
 
     $('select').select2();
 
