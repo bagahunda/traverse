@@ -1,11 +1,11 @@
 (function ($) {
 
   var image = '';
-  var images = ['hyhero1.jpg', 'hyhero2.jpg', 'hyhero3.jpg', 'hyhero4.jpg', 'hyhero5.jpg', 'hyhero6.jpg', 'hyhero7.jpg', 'hyhero8.jpg']
+  var images = ['hyhero1.jpg', 'hyhero2.jpg', 'hyhero3.jpg', 'hyhero4.jpg', 'hyhero5.jpg', 'hyhero6.jpg', 'hyhero7.jpg']
 
 
   function randomHeroBg () {
-    var i = 1;
+    var i = -1; //set to -1 because of the initial fallback image bg-home.jpg (not inside the images[] array) loads first and increases i by 1.
     return function setBg() {
       $('.hero__bg').fadeOut(1000, function() {
         $(this).css({
@@ -13,8 +13,8 @@
         }).fadeIn(1000);
       });
       i++;
-      if (i === 8) {
-        i = 1;
+      if (i === 7) {
+        i = 0;
       }
     }
     // var rand = Math.floor(Math.random() * 8);
@@ -37,7 +37,7 @@
   $(document).ready(function () {
     setInterval(function() {
       randomHeroBg();
-    }, 8000);
+    }, 7000);
 
     $('select').select2();
 
