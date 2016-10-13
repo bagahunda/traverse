@@ -135,15 +135,28 @@
     padding: 0 20px
     justify-content: space-between
 
+    @media screen and (max-width: 940px)
+      flex-wrap: wrap
+
     li
       margin-bottom: 0 !important
       display: block
       position: relative
       width: calc((100% - 160px) / 5)
 
+      @media screen and (max-width: 940px)
+        width: 100%
+
+      &:not(:last-child)
+        @media screen and (max-width: 940px)
+          margin-bottom: 20px !important
+
       img
         margin: 0
         transition: all 0.3s ease-in-out
+
+        @media screen and (max-width: 940px)
+          margin: 0 auto
 
   // &__footer
   //   margin-top: 64px
