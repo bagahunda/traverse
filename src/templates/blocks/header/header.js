@@ -11,6 +11,10 @@
           $('html, body').animate({
             scrollTop: target.offset().top - 75
           }, 1000);
+          if ($('.main-nav').hasClass('nav--is-shown')) {
+            $('.nav--is-shown').removeClass('nav--is-shown');
+            $('.cover').fadeOut();
+          }
           return false;
         }
       }
