@@ -15,9 +15,7 @@
 
     setEqualHeight('inner-container', 'feature__img');
 
-    $('.bx-slider').bxSlider({
-      adaptiveHeight: true
-    });
+    $('.bx-slider').bxSlider({});
 
   });
 
