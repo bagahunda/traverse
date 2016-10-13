@@ -68,6 +68,9 @@ div[class^='hero-bg__item']
   height: calc(100vh - 65px)
   margin-top: 65px
 
+  @media screen and (max-height: 500px)
+    height: auto
+
 .modal--with-overlay
   position: fixed
   top: 0
@@ -89,13 +92,13 @@ div[class^='hero-bg__item']
     width: 80%
 
   .modal__header
-    padding: 60px 20px 0
+    padding: 60px 35px 0
 
     @media screen and (max-width: 600px)
-      padding: 20px 20px 0
+      padding: 20px 35px 0
 
     @media screen and (max-height: 850px)
-      padding: 20px 20px 0
+      padding: 20px 35px 0
 
     p
       margin: 20px auto 0
@@ -105,6 +108,10 @@ div[class^='hero-bg__item']
     top: 20px
     right: 20px
     z-index: 2
+
+    @media screen and (max-width: 940px)
+      right: auto
+      left: 16px
 
   .inner-hero-title
     font-size: rem(24px)
