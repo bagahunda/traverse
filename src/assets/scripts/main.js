@@ -79,6 +79,22 @@
 
     });
 
+    $('.modal--with-overlay').on('click', function (e) {
+
+      var target = e.target.className;
+      if (target === 'modal modal modal--with-overlay modal--visible') {
+        if ($('.demo-form').length > 0) {
+          $(".demo-form").trigger('reset');
+        }
+        $('.modal').removeClass('modal--visible');
+        setTimeout(function(){
+          $('body, div.intercom-messenger-frame').removeClass('modal-shown').removeAttr('style');
+          $('div.header').removeAttr('style');
+          $('#intercom-container').contents().find('iframe.intercom-launcher-frame').removeAttr('style');
+        },300);
+      }
+    })
+
     $('.js-top').on('click', function (e) {
 
       e.preventDefault();

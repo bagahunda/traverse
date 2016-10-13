@@ -154,12 +154,19 @@
   max-width: 64vw
   margin: 0 auto
 
+  @media screen and (max-width: 1240px)
+    width: 100%
+    max-width: 1160px
+
   @media screen and (max-width: 940px)
     max-width: none
 
   .feature
     // width: 50%
     // text-align: center
+
+    &:first-child
+      margin-bottom: 20px
 
     @media screen and (max-width: 940px)
       width: 100%
