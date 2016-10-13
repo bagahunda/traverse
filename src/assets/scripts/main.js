@@ -10,25 +10,36 @@
     //Intercom Initialization Ends
 
     $('.modal .flex img').on('click', function() {
-      if ($(this).hasClass('modal-enlarge')) {
-        $(this).removeClass('modal-enlarge');
-        $(this).on('transitionend webkitTransitionEnd oTransitionEnd', function () {
-          $(this).parents('.bx-viewport').css({
-            'overflow': 'hidden'
-          })
+
+      var winWidth = $(window).width();
+      var winHeight = $(window).height();
+      var w = $(this).width();
+      var h = $(this).height();
+      var xOffset = $(this).offset().left;
+      var yOffset = $(this).offset().top;
+
+      var zoom = ("<div class='zoom-img'></div>");
+
+      if (winWidth > 600) {
+        if ($('.zoom-img').length > 0) {
+          $('.zoom-img').removeClass('zoom-img--visible').remove();
+        }
+        $(this).parents('.modal__content').append(zoom);
+        $('.zoom-img').css({
+          'width': w * 2,
+          'height': h * 2
+        });
+        $('.zoom-img').addClass('zoom-img--visible').css({
+          'background': 'url("' + $(this).attr('src') + '")'
         });
       } else {
-        $('.modal-enlarge').removeClass('modal-enlarge');
-        $(this).addClass('modal-enlarge');
-        $(this).parents('.bx-viewport').css({
-          'overflow': 'visible'
-        });
-        $(this).on('transitionend webkitTransitionEnd oTransitionEnd', function () {
-          $(this).parents('.bx-viewport').css({
-            'overflow': 'visible'
-          })
-        });
+        return false;
       }
+    });
+
+    $('body').on('click', '.zoom-img', function () {
+      $(this).removeClass('zoom-img--visible');
+      $(this).remove();
     });
 
     $('.js-show-modal').on('click', function (e) {
