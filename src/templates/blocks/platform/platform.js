@@ -17,12 +17,8 @@
 
 
     $('.bx-slider').bxSlider({
-      mode: 'fade'
-      // onSlideAfter: function ($slideElement, oldIndex, newIndex) {
-      //   $slideElement.css({
-      //     'opacity': 1
-      //   })
-      // }
+      mode: 'fade',
+      speed: 1000
     });
 
   });
