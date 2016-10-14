@@ -94,7 +94,7 @@
 
 .feature
   width: 50%
-  padding: 0 20px
+  // padding: 0 20px
   float: left
   text-align: center
 
@@ -114,6 +114,9 @@
     font-family: $din-pro-medium
     font-size: rem(16px)
     text-transform: uppercase
+
+    @media screen and (max-width: 600px)
+      padding: 0 20px
 
     // @media screen and (max-width: 940px)
     //   font-size: rem(16px)
@@ -203,6 +206,9 @@
   position: relative
   box-shadow: none
   border: none
+  margin-bottom: 20px
+  background: transparent
+  left: 0
   z-index: 3
 
 .bx-wrapper .bx-pager.bx-default-pager a
@@ -217,7 +223,3 @@
 
 // .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto
 //   bottom: -100px
-
-.bx-wrapper .bx-viewport
-  margin-bottom: 20px
-  background: transparent

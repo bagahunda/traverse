@@ -15,7 +15,15 @@
 
     setEqualHeight('inner-container', 'feature__img');
 
-    $('.bx-slider').bxSlider({});
+
+    $('.bx-slider').bxSlider({
+      mode: 'fade'
+      // onSlideAfter: function ($slideElement, oldIndex, newIndex) {
+      //   $slideElement.css({
+      //     'opacity': 1
+      //   })
+      // }
+    });
 
   });
 
