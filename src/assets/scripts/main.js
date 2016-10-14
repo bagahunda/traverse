@@ -30,7 +30,8 @@
           'height': h * 2
         });
         $('.zoom-img').addClass('zoom-img--visible').css({
-          'background': 'url("' + $(this).attr('src') + '")'
+          'background': 'url("' + $(this).attr('src') + '") no-repeat',
+          'background-size': 'cover'
         });
       } else {
         return false;
