@@ -17,8 +17,7 @@
 
 
     $('.bx-slider').bxSlider({
-      mode: 'fade',
-      speed: 1000
+      mode: 'fade'
     });
 
   });
