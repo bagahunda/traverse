@@ -20,6 +20,14 @@
       }
     });
 
+    // get hash from url and scroll to this section
+    var hash = location.hash.substr(1);
+    if (hash.length) {
+      $('html, body').animate({
+        scrollTop: hash.offset().top - 75
+      }, 1000);
+    }
+
     //Show and hide mobile nav
     $('.js-mobile-menu').on('click', function (e) {
       e.preventDefault();
